@@ -35,18 +35,18 @@
 
     <div class="mt-4">
         <h2>Adatok lekérdezése</h2>
-        <form action="csaladfa.db" method="get">
+        <form action="/adatok/:nev" method="get">
             <div class="form-group">
                 <label for="nev">Név:</label>
                 <input type="text" class="form-control" id="nev" name="nev" required>
             </div>
             <button type="submit" class="btn btn-primary">Adatok lekérdezése</button>
-        </form>
+         </form>
     </div>
 
     <div class="mt-4">
         <h2>Adatok bevitele</h2>
-        <form action="/adatbevitel" method="post">
+        <form action="/adatbevitel" method="post"></form>
             <table class="table">
                 <thead>
                     <tr>

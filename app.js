@@ -20,7 +20,7 @@
 */
 
 const express = require('express');
-const sqlite3 = require('sqlite3');
+const sqlite3 = require('sqlite3').verbose();
 const path = require('path');
 const bodyParser = require('body-parser');
 
@@ -29,7 +29,12 @@ const port = 3000;
 
 // Adatbázis inicializálása
 const dbPath = path.resolve(__dirname, 'csaladfa.db');
-const db = new sqlite3.Database(dbPath);
+const db = new sqlite3.Database(dbPath, (err) => {
+    if (err) {
+        return console.error(err.message);
+    }
+    console.log('Connected to the SQlite database.');
+ });
 
 // Middleware konfiguráció
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -95,6 +100,16 @@ app.get('/', (req, res) => {
 });
 
 // Indítás
-app.listen(port, () => {
+app.listen(port.toString(), () => {
     console.log(`A szerver fut a http://localhost:${port} címen.`);
 });
+
+// Adatbázis lezárása
+process.on('exit', () => {
+    db.close((err) => {
+        if (err) {
+            return console.error(err.message);
+        }
+        console.log('Adatbázis lezárása.');
+    });
+ });
