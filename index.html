@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Családfa</title>
+    <!-- Bootstrap CSS betöltése -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+</head>
+<body class="container">
+    <h1 class="mt-4">Családfa</h1>
+
+    <div class="mt-4">
+        <h2>Adatok lekérdezése</h2>
+        <form action="csaladfa.db" method="get">
+            <div class="form-group">
+                <label for="nev">Név:</label>
+                <input type="text" class="form-control" id="nev" name="nev" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Adatok lekérdezése</button>
+        </form>
+    </div>
+
+    <div class="mt-4">
+        <h2>Adatok bevitele</h2>
+        <form action="/adatbevitel" method="post">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Név</th>
+                        <th>Születési dátum</th>
+                        <th>Születési hely</th>
+                        <th>Anyja neve</th>
+                        <th>Apa neve</th>
+                        <th>Elhalálozás dátuma</th>
+                        <th>Elhalálozás helye</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><input type="text" class="form-control" name="nev" required></td>
+                        <td><input type="text" class="form-control" name="szuletesi_datum" required></td>
+                        <td><input type="text" class="form-control" name="szuletesi_hely" required></td>
+                        <td><input type="text" class="form-control" name="anya_neve" required></td>
+                        <td><input type="text" class="form-control" name="apa_neve" required></td>
+                        <td><input type="text" class="form-control" name="halal_datum"></td>
+                        <td><input type="text" class="form-control" name="halal_hely"></td>
+                    </tr>
+                </tbody>
+            </table>
+            <button type="submit" class="btn btn-success">Adatok beküldése</button>
+        </form>
+    </div>
+
+    <!-- Bootstrap JavaScript és a jQuery betöltése (szükséges a Bootstrap számára) -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+</body>
+</html>

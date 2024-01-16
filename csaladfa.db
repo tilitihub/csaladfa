@@ -1,0 +1,57 @@
+SQLite format 3@.WJ
+tablecsaladcsalad CREATE TABLE csalad (
+        id INTEGER PRIMARY KEY,
+        nev TEXT,
+        szuletesi_datum TEXT,
+        szuletesi_hely TEXT,
+        anya_neve TEXT,
+        apa_neve TEXT,
+        halal_datum TEXT,
+        halal_hely TEXT
+    )
+
+Név: Nagy József
+Születési dátum: 1950-02-10
+Születési hely: Szeged
+Anya neve: Szűcs Kamilla
+Apa neve: Nagy Elemér
+Halálozás dátuma: 2010-07-20
+Halálozás helye: Budapest
+
+Név: Kiss Mária
+Születési dátum: 1952-06-15
+Születési hely: Debrecen
+Anya neve: Csőke Katalin
+Apa neve: Kiss Mátyás
+
+Név: Nagy Katalin
+Születési dátum: 1975-12-05
+Születési hely: Budapest
+Anya neve: Kiss Mária
+Apa neve: Nagy József
+Halálozás dátuma: 2022-03-10
+Halálozás helye: Szeged
+
+Név: Tóth Éva
+Születési dátum: 1955-09-20
+Születési hely: Debrecen
+Anya neve: Kovács Éva Erzsébet
+Apa neve:  Tóth Árpád Géza
+
+Név: Kovács Péter
+Születési dátum: 1980-08-20
+Születési hely: Debrecen
+Anya neve: Tóth Éva
+Apa neve: Kovács Géza
+
+Név: Kovács Patrik
+Születési dátum: 2005-04-15
+Születési hely: Szeged
+Anya neve: Nagy Katalin
+Apa neve: Kovács Péter
+
+Név: Kovács Anna
+Születési dátum: 2008-10-02
+Születési hely: Debrecen
+Anya neve: Nagy Katalin
+Apa neve: Kovács Péter

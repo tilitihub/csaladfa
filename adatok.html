@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adatok Bevitel</title>
+    <!-- Bootstrap CSS betöltése -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+</head>
+<body class="container">
+    <h1 class="mt-4">Adatok Bevitel</h1>
+
+    <div class="mt-4">
+        <form action="/adatbevitel" method="post">
+            <div class="form-group">
+                <label for="nev">Név:</label>
+                <input type="text" class="form-control" id="nev" name="nev" required>
+            </div>
+            <div class="form-group">
+                <label for="szuletesi_datum">Születési dátum:</label>
+                <input type="text" class="form-control" id="szuletesi_datum" name="szuletesi_datum" required>
+            </div>
+            <div class="form-group">
+                <label for="szuletesi_hely">Születési hely:</label>
+                <input type="text" class="form-control" id="szuletesi_hely" name="szuletesi_hely" required>
+            </div>
+            <div class="form-group">
+                <label for="anya_neve">Anyja neve:</label>
+                <input type="text" class="form-control" id="anya_neve" name="anya_neve" required>
+            </div>
+            <div class="form-group">
+                <label for="apa_neve">Apa neve:</label>
+                <input type="text" class="form-control" id="apa_neve" name="apa_neve" required>
+            </div>
+            <div class="form-group">
+                <label for="halal_datum">Halálozás dátuma:</label>
+                <input type="text" class="form-control" id="halal_datum" name="halal_datum">
+            </div>
+            <div class="form-group">
+                <label for="halal_hely">Halálozás helye:</label>
+                <input type="text" class="form-control" id="halal_hely" name="halal_hely">
+            </div>
+            <button type="submit" class="btn btn-success">Adatok beküldése</button>
+        </form>
+    </div>
+
+    <!-- Bootstrap JavaScript és a jQuery betöltése (szükséges a Bootstrap számára) -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+</body>
+</html>
